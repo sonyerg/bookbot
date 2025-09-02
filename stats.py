@@ -4,4 +4,12 @@ def get_num_words(text):
     for i in text.split():
         num_words += 1
 
-    print(f"{num_words} words found in the document")
+    return num_words
+
+
+def get_num_char(text):
+    counts = {}
+    for char in text.lower():
+        counts[char] = counts.get(char, 0) + 1
+
+    return counts
