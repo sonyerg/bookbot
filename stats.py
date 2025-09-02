@@ -7,9 +7,24 @@ def get_num_words(text):
     return num_words
 
 
-def get_num_char(text):
+def get_num_chars(text):
     counts = {}
     for char in text.lower():
         counts[char] = counts.get(char, 0) + 1
-
     return counts
+
+
+def sort_on(item):
+    return item["num"]
+
+
+def sort_dict(char_count):
+    result = []
+
+    for k, v in char_count.items():
+        if k.isalpha():
+            result.append({"char": k, "num": v})
+
+    result.sort(reverse=True, key=sort_on)
+
+    return result
