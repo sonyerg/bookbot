@@ -10,8 +10,8 @@ def main():
 
     text = get_book_text(sys.argv[1])
     num_words = get_num_words(text)
-    num_char = get_num_chars(text)
-    sorted_dict = sort_dict(num_char)
+    num_chars = get_num_chars(text)
+    sorted_dict = sort_dict(num_chars)
 
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {sys.argv[1]}...")
